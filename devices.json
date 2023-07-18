@@ -1,0 +1,71 @@
+[
+	{
+		"slave": 2,
+		"name": "SDM120M",
+		"input_registers": [
+			{"id":"0x0000","type":"float32","divider":1,"unit":"V",		"description":"Voltage",				"Unit":1,"Type":243,"SubType":8,"Used":0},
+			{"id":"0x0006","type":"float32","divider":1,"unit":"A",		"description":"Current",				"Unit":2,"Type":243,"SubType":23,"Used":0},
+			{"id":"0x000C","type":"float32","divider":1,"unit":"W",		"description":"ActivePower",			"Unit":3,"Type":248,"SubType":1,"Used":0},
+			{"id":"0x0012","type":"float32","divider":1,"unit":"VA",	"description":"ApparentPower",			"Unit":4,"Type":243,"SubType":31,"Used":0},
+			{"id":"0x0018","type":"float32","divider":1,"unit":"VAr",	"description":"ReactivePower",			"Unit":5,"Type":243,"SubType":31,"Used":0},
+			{"id":"0x001E","type":"float32","divider":1,"unit":"",		"description":"PowerFactor",			"Unit":6,"Type":243,"SubType":31,"Used":0},
+			{"id":"0x0046","type":"float32","divider":1,"unit":"Hz",	"description":"Frequency",				"Unit":7,"Type":243,"SubType":31,"Used":0},
+			{"id":"0x0048","type":"float32","divider":0.001,"unit":"kWh",	"description":"ImportActiveEnergy",		"Unit":8,"Type":113,"SubType":0,"Used":0},
+			{"id":"0x004A","type":"float32","divider":0.001,"unit":"kWh",	"description":"ExportActiveEnergy",		"Unit":9,"Type":113,"SubType":0,"Used":0},
+			{"id":"0x004C","type":"float32","divider":0.001,"unit":"kvarh",	"description":"ImportReactiveEnergy",	"Unit":10,"Type":113,"SubType":0,"Used":0},
+			{"id":"0x004E","type":"float32","divider":0.001,"unit":"kvarh",	"description":"ExportReactiveEnergy",	"Unit":11,"Type":113,"SubType":0,"Used":0},
+			{"id":"0x0156","type":"float32","divider":0.001,"unit":"kWh",	"description":"TotalActiveEnergy",		"Unit":12,"Type":113,"SubType":0,"Used":0},
+			{"id":"0x0158","type":"float32","divider":0.001,"unit":"kvarh",	"description":"TotalReactiveEnergy",	"Unit":13,"Type":113,"SubType":0,"Used":0}
+		]
+	},
+	{
+		"slave": 3,
+		"name": "SDM72M",
+		"input_registers": [
+			{"id":52,	"type":"float32","divider":1,"unit":"W",		"description":"Total system power",			"Unit":14,"Type":248,"SubType":1,"Used":0},
+			{"id":72,	"type":"float32","divider":0.001,"unit":"kWh",	"description":"Import Wh since last reset",	"Unit":15,"Type":113,"SubType":0,"Used":0},
+			{"id":74,	"type":"float32","divider":0.001,"unit":"kWh",	"description":"Export Wh since last reset",	"Unit":16,"Type":113,"SubType":0,"Used":0},
+			{"id":342,	"type":"float32","divider":0.001,"unit":"kWh",	"description":"Total",						"Unit":17,"Type":113,"SubType":0,"Used":0},
+			{"id":384,	"type":"float32","divider":0.001,"unit":"kWh",	"description":"Settable total kWh",			"Unit":18,"Type":113,"SubType":0,"Used":0},
+			{"id":388,	"type":"float32","divider":0.001,"unit":"kWh",	"description":"Settable import kWh",		"Unit":19,"Type":113,"SubType":0,"Used":0},
+			{"id":390,	"type":"float32","divider":0.001,"unit":"kWh",	"description":"Settable export kWh",		"Unit":20,"Type":113,"SubType":0,"Used":0},
+			{"id":1280,	"type":"float32","divider":0.001,"unit":"kWh",	"description":"Import power",				"Unit":21,"Type":248,"SubType":1,"Used":0},
+			{"id":1282,	"type":"float32","divider":0.001,"unit":"kWh",	"description":"Export power",				"Unit":22,"Type":248,"SubType":1,"Used":0}
+		]
+	},
+	{
+		"slave": 1,
+		"name": "Growatt",
+		"input_registers": [
+			{"id":3,"type":"int8","divider":10,"unit":"V","description":"PV 1 Volts",		"Unit":23,"Type":243,"SubType":8,"Used":0},
+			{"id":4,"type":"int8","divider":10,"unit":"A","description":"PV 1 Amps",		"Unit":24,"Type":243,"SubType":23,"Used":0},
+			{"id":5,"type":"int32","divider":10,"unit":"W","description":"PV 1 Watts",		"Unit":25,"Type":248,"SubType":1,"Used":0},
+			{"id":7,"type":"int8","divider":10,"unit":"V","description":"PV 2 Volts",		"Unit":26,"Type":243,"SubType":8,"Used":0},
+			{"id":8,"type":"int8","divider":10,"unit":"A","description":"PV 2 Amps",		"Unit":27,"Type":243,"SubType":23,"Used":0},
+			{"id":9,"type":"int32","divider":10,"unit":"W","description":"PV 2 Watts",		"Unit":28,"Type":248,"SubType":1,"Used":0},
+			{"id":11,"type":"int32","divider":10,"unit":"W","description":"Grid Watt",		"Unit":29,"Type":248,"SubType":1,"Used":0},
+			{"id":13,"type":"int8","divider":100,"unit":"Hz","description":"Grid Frequency","Unit":30,"Type":243,"SubType":31,"Used":0},
+			{"id":26,"type":"int32","divider":0.01,"unit":"kWh","description":"kWh Today",	"Unit":31,"Type":113,"SubType":0,"Used":0},
+			{"id":28,"type":"int32","divider":0.01,"unit":"kWh","description":"kWh Total",	"Unit":32,"Type":113,"SubType":0,"Used":0},
+			{"id":0,"type":"int8","divider":1,"unit":"","description":"Status",				"Unit":33,"Type":243,"SubType":22,"Used":0, "translate":{"0":"Waiting","1":"Normal","3":"Fault"}, "colors":{"0":"0","1":"1","3":"0"}},
+			{"id":40,"type":"int8","divider":1,"unit":"","description":"Fault code",		"Unit":34,"Type":243,"SubType":22,"Used":0, "translate":{"0":"None","24":"Auto Test Failed","25":"No AC Connection","26":"PV Isolation Low","27":"Residual Current High","28":"DC Current High","29":"PV Voltage High","30":"AC Voltage Outrange","31":"AC Freq Outrange","32":"Module Hot"}, "colors":{"0":"1","24":"4","25":"4","26":"4","27":"4","28":"4","29":"4","30":"4","31":"4","32":"4"}},
+
+			{"id":32,"type":"int8","divider":10,"unit":"°C","description":"Inverter temperature",	"Unit":35,"Type":243,"SubType":31,"Used":0},
+			{"id":41,"type":"int8","divider":10,"unit":"°C","description":"IPM temperature",			"Unit":36,"Type":243,"SubType":31,"Used":0},
+
+			{"id":14,"type":"int8","divider":17.32,"unit":"V","description":"AC 1 Volts",		"Unit":37,"Type":243,"SubType":8,"Used":0},
+			{"id":15,"type":"int8","divider":10,"unit":"A","description":"AC 1 Amps",		"Unit":38,"Type":243,"SubType":23,"Used":0},
+			{"id":16,"type":"int32","divider":10,"unit":"W","description":"AC 1 Watts",		"Unit":39,"Type":248,"SubType":1,"Used":0},
+			{"id":18,"type":"int8","divider":17.32,"unit":"V","description":"AC 1 Volts",		"Unit":40,"Type":243,"SubType":8,"Used":0},
+			{"id":19,"type":"int8","divider":10,"unit":"A","description":"AC 1 Amps",		"Unit":41,"Type":243,"SubType":23,"Used":0},
+			{"id":20,"type":"int32","divider":10,"unit":"W","description":"AC 1 Watts",		"Unit":42,"Type":248,"SubType":1,"Used":0},
+			{"id":22,"type":"int8","divider":17.32,"unit":"V","description":"AC 1 Volts",		"Unit":43,"Type":243,"SubType":8,"Used":0},
+			{"id":23,"type":"int8","divider":10,"unit":"A","description":"AC 1 Amps",		"Unit":44,"Type":243,"SubType":23,"Used":0},
+			{"id":24,"type":"int32","divider":10,"unit":"W","description":"AC 1 Watts",		"Unit":45,"Type":248,"SubType":1,"Used":0}
+		]
+	}	
+]
+
+
+
+
