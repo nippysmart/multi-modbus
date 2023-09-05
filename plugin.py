@@ -11,7 +11,6 @@
 # 2. pip install pyModbusTCP
 # 3. pip install json
 #
-#
 """
 <plugin key="NIPPYMultiModBus" name="NIPPY Multi ModBus resolver" author="leniwiec" version="1.0.0">
     <params>
